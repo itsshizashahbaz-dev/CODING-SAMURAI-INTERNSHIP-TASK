@@ -1,4 +1,5 @@
-README – Rule-Based Chatbot (Coding Samurai Internship Task 1)
+Rule-Based Chatbot (Coding Samurai Internship Task 1)
+
 📘 Introduction
 This project was completed as part of the Coding Samurai AI Internship (Task 1). The goal was to develop a Rule-Based Chatbot using Python that can simulate simple customer support interactions. The chatbot identifies user queries using predefined rules and responds appropriately based on detected keywords.
 🧩 Project Overview
