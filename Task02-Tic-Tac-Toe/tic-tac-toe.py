@@ -14,7 +14,7 @@ WIN_LINES = [
 ]
 
 def clear_screen():
-    # Works in normal terminals (Windows / macOS / Linux)
+    # Works in normal terminals 
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def print_board(board):
@@ -41,7 +41,7 @@ def is_draw(board):
 def game_over(board):
     return is_winner(board, 'X') or is_winner(board, 'O') or is_draw(board)
 
-# --- Scoring (for Minimax) ---
+# Scoring (for Minimax)
 
 def score_board(board, ai_player):
     other = 'O' if ai_player == 'X' else 'X'
@@ -52,7 +52,7 @@ def score_board(board, ai_player):
     else:
         return 0
 
-# --- Minimax with Alpha-Beta Pruning ---
+# Minimax with Alpha-Beta Pruning 
 
 def minimax_ab(board, ai_player, current_player, alpha=-math.inf, beta=math.inf):
     if game_over(board):
@@ -89,8 +89,7 @@ def minimax_ab(board, ai_player, current_player, alpha=-math.inf, beta=math.inf)
                 break
         return best_score, best_move
 
-# --- Choose AI Move (tie-breaking randomly) ---
-
+#  Choose AI Move 
 def choose_ai_move(board, ai_player):
     best_score = -math.inf
     best_moves = []
@@ -106,7 +105,7 @@ def choose_ai_move(board, ai_player):
             best_moves.append(move)
     return random.choice(best_moves)
 
-# --- Game Loop ---
+#  Game Loop 
 
 def play_console():
     board = new_board()
